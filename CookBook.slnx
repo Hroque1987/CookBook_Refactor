@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/BackEnd/">
+    <Project Path="API/API.csproj" />
+    <Project Path="Application/Application.csproj" />
+    <Project Path="Domain/Domain.csproj" />
+    <Project Path="Infrastructure/Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Mobile/" />
+  <Folder Name="/Shared/">
+    <Project Path="Communication/Communication.csproj" />
+    <Project Path="Exceptions/Exceptions.csproj" />
+  </Folder>
+</Solution>

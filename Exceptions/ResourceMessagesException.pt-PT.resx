@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<accessability>public</accessability>
+	<data id="327bbe80-e144-4a58-b297-79b60a3ace35" name="INVALID_EMAIL" xml:space="preserve">
+		<value>Email Invalido</value>
+		<comment></comment>
+	</data>
+	<data id="309f3b66-4c7e-4c5e-83b8-480302405011" name="INVALID_PASSWORD" xml:space="preserve">
+		<value>A palavra-passe deve ter pelo menos 6 caracteres</value>
+		<comment></comment>
+	</data>
+	<data id="4692b681-9664-45d9-9ca4-1a1e414b4022" name="NAME_EMPTY" xml:space="preserve">
+		<value>Nome Obrigatorio</value>
+		<comment></comment>
+	</data>
+	<data id="38059ea9-81e5-4d0e-aa45-15a286670f26" name="SEE_ERRORS" xml:space="preserve">
+		<value>Veja os erros no detalhe</value>
+		<comment></comment>
+	</data>
+	<data id="fecef582-2985-4857-a569-a99764b02216" name="UNKNOWN_ERROR" xml:space="preserve">
+		<value>Erro desconhecido</value>
+		<comment></comment>
+	</data>
+	<data id="35312173-3c00-48a0-9bf0-e4733d3edcdc" name="VALIDATION_FAILED" xml:space="preserve">
+		<value>Erro Na Validação</value>
+		<comment></comment>
+	</data>
+</root>
