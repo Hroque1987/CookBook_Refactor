@@ -1,5 +1,7 @@
 using API.Filters;
 using Application;
+using Infrastructure;
+using Microsoft.Extensions.Options;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,8 +15,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddControllers(options => options.Filters.Add(typeof(ExceptionFilters)));
 
-
-builder.Services.AddApplication();
+builder.Services.AddApplication(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
