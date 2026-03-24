@@ -57,6 +57,11 @@ namespace Exceptions {
 		/// <summary>
 		/// 
 		/// </summary>
+		public static string EMAIL_EXISTS => ResourceManager.GetString("EMAIL_EXISTS", resourceCulture);
+
+		/// <summary>
+		/// 
+		/// </summary>
 		public static string INVALID_EMAIL => ResourceManager.GetString("INVALID_EMAIL", resourceCulture);
 
 		/// <summary>

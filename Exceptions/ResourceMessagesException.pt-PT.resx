@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
 	<accessability>public</accessability>
+	<data id="2560047b-fd07-49fa-aaa0-3d5fd7341306" name="EMAIL_EXISTS" xml:space="preserve">
+		<value>Email já registado</value>
+		<comment></comment>
+	</data>
 	<data id="327bbe80-e144-4a58-b297-79b60a3ace35" name="INVALID_EMAIL" xml:space="preserve">
 		<value>Email Invalido</value>
 		<comment></comment>
