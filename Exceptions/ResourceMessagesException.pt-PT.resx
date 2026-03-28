@@ -5,6 +5,10 @@
 		<value>Email já registado</value>
 		<comment></comment>
 	</data>
+	<data id="0ca5e5bd-296c-442e-8219-0e824be98094" name="EMPTY_EMAIL" xml:space="preserve">
+		<value>Email Obrigatorio</value>
+		<comment></comment>
+	</data>
 	<data id="327bbe80-e144-4a58-b297-79b60a3ace35" name="INVALID_EMAIL" xml:space="preserve">
 		<value>Email Invalido</value>
 		<comment></comment>

@@ -10,4 +10,9 @@
     <Project Path="Communication/Communication.csproj" />
     <Project Path="Exceptions/Exceptions.csproj" />
   </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/CommonTestUtilities/CommonTestUtilities.csproj" />
+    <Project Path="Tests/UseCases.Test/UseCases.Test.csproj" />
+    <Project Path="Tests/Validation.Test/Validation.Test.csproj" />
+  </Folder>
 </Solution>

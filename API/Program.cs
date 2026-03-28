@@ -1,6 +1,9 @@
 using API.Filters;
 using Application;
+using FluentMigrator.Runner.Initialization;
 using Infrastructure;
+using Infrastructure.Extensions;
+using Infrastructure.Migrations;
 using Microsoft.Extensions.Options;
 using Scalar.AspNetCore;
 
@@ -15,6 +18,7 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddControllers(options => options.Filters.Add(typeof(ExceptionFilters)));
 
+builder.Configuration.ConnectionString();
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -33,4 +37,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+MigrateDatabase();
+
 app.Run();
+
+
+void MigrateDatabase() 
+{
+    DataBaseMigration.Migrate(builder.Configuration.ConnectionString(),
+    app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
+}

@@ -1,8 +1,11 @@
 using System;
+using System.Reflection;
 using Domain.Repositories;
 using Domain.Repositories.User;
+using FluentMigrator.Runner;
 using Infrastructure.DataAccess;
 using Infrastructure.DataAccess.Respositories;
+using Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +20,7 @@ public static class DependencyInjectionExtension
 
         AddDbContext(services, configuration);
         AddRepositories(services);
+        AddFluetMigrator(services, configuration);
     }
 
     private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
@@ -25,7 +29,7 @@ public static class DependencyInjectionExtension
 
         services.AddDbContext<MyRecipyBookDbContext>(options =>
         {
-            options.UseSqlServer(configuration.GetConnectionString("Connection"));
+            options.UseSqlServer(configuration.ConnectionString());
         });
     }
 
@@ -35,6 +39,17 @@ public static class DependencyInjectionExtension
         services.AddScoped<IUserWriteOnlyRespository, UserRepository> ();
         services.AddScoped<IUnitOfWork, UnitOfWork> ();
 
+    }
+
+    public static void AddFluetMigrator(IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddFluentMigratorCore().ConfigureRunner(options =>
+        {
+           options
+           .AddSqlServer()
+           .WithGlobalConnectionString(configuration.ConnectionString())
+           .ScanIn(Assembly.Load("Infrastructure")).For.All();
+        });
     }
 
 }

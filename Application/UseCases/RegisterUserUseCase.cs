@@ -21,7 +21,6 @@ public class RegisterUserUseCase : IRegisterUserUseCase
     private readonly IUserWriteOnlyRespository _userWriteOnlyRespository;
     private readonly IMapper _mapper;
     private readonly IUnitOfWork _unitOfWork;
-
     private readonly IUserReadOnlyRepository _userReadOnlyRepository;
     public RegisterUserUseCase(IValidator<RequestRegisterUserJson> registerUserValidator, 
                                         PasswordEncrypter passwordEncrypter, IUserWriteOnlyRespository userWriteOnlyRespository, 
@@ -50,7 +49,7 @@ public class RegisterUserUseCase : IRegisterUserUseCase
  
         return new ResponseRegisterUserJson()
         {
-            Name = request.Name
+            Name = user.Name
         };
     }
 

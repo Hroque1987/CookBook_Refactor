@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.72" />
+    <PackageReference Include="FluentMigrator" Version="8.0.1" />
+    <PackageReference Include="FluentMigrator.Runner" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.5" />
@@ -19,6 +22,8 @@
   <ItemGroup>
     <Folder Include="DataAccess\" />
     <Folder Include="DataAccess\Respositories\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Migrations\Versions\" />
   </ItemGroup>
 
 </Project>
